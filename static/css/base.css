@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    background-color: #e4000f;
+}
+
+.navLogo{
+    max-height: 100%;  
+    max-width: 100%; 
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    padding-top: 7px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin: auto;
+}
+
+.topnav {
+    margin-left:2vw;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    /* font-weight: bold; */
+}
+
+.topnav a:hover {
+    background-color:#ffffff;
+    color: #e4000f;
+    border-radius: .25rem;
+}
+
+.topnav a:focus{
+    background-color: white;
+    color: #e4000f;
+    border-radius: .25rem;
+}
+
+#mainLogo {
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: .25rem;
+}
+
+#mainLogo:hover {
+    background-color: #3AD1FF;
+}
+
+/* Navbar Active Page */
+.active {
+    background-color:rgba(180, 3, 3, 0.781);
+    font-weight: bolder;
+    border-radius: .25rem;
+}
+
+.homePageBG{
+    background-size : 100% auto;
+    background-image: url('/static/img/mainScreen.png');
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+.subPageBG{
+    /* background-size : 100% auto; */
+    background-image: url('/static/img/mainScreen.png');
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+  }
+
+.subPageBG::before{
+    z-index: -2;
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(255,255,255,0.40);
+    background-size: cover;
+}
+
+#music{
+    position: absolute;
+    left: 90vw;
+}
+
+.speechBtn{
+    position: absolute;
+    left: 80vw;
+    background-color:#D9FAF9;
+    color: black;
+    
+}
+
+.speechBtn:active{
+    background-color:red;
+}

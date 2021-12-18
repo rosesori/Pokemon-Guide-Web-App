@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% set active_page = "index" %}
+
+<!--? To update from master?-->
+<!--from sub branch:-->
+<!--git merge master-->
+<!--git push-->
+
+{% block head %}
+<title>Home Page</title>
+{% endblock %}
+
+{% block body %}
+    <!-- Blastoise gif-->
+    <div id = "frame">
+        <iframe src="https://giphy.com/embed/EWRztVBjmMCxG"width="50%" height="50%"
+        style=" pointer-events: none;" frameBorder="0" class="giphy-embed" ></iframe>   
+    </div>
+
+    <!-- Pokemon building buttons-->
+    <div class="userSelect">
+        <div>
+            <a href="{{url_for('typeTutor')}}" >
+                
+                <button id="typeBtn" class="button" data-bs-placement="bottom" 
+                data-bs-trigger="hover" data-toggle="popover" 
+                title="Type Tutorial" 
+                data-bs-content="Learn about Pokemon type advantages and which types your Pokemon are strong against">
+                    <img src="{{url_for('static', filename='img/pokeHeal.png')}}" class="imgType"/>
+                    Type Tutorial
+                </button>
+            </a>
+        </div>
+
+        <div>
+            <a href="{{url_for('team')}}">
+                <button id="typeBtn" class="button" data-bs-placement="bottom" 
+                data-bs-trigger="hover" data-toggle="popover" 
+                title="Team Composition" 
+                data-bs-content="Learn what makes a good Pokemon team and see if yours can be improved">
+                    <img src="{{url_for('static', filename='img/gym.png')}}" class="imgType" />
+                    Team Composition
+                </button>
+                <br>
+            </a>
+        </div>
+
+        <div>
+            <a href="{{url_for('item')}}">
+                <button id="typeBtn" class="button"  data-bs-placement="bottom" 
+                data-bs-trigger="hover" data-toggle="popover" 
+                title="HM's and TM's Guide" 
+                data-bs-content="Learn about HM's and TM's and which ones can go on different Pokemon types">
+                    <img src="{{url_for('static', filename='img/pokeItem.png')}}" class="imgType" />
+                    HM's and TM's
+                </button>
+                <br>
+            </a>
+        </div>
+    </div>
+
+<!-- Enable popper.js necessities -->
+<script>
+	var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="popover"]'));
+	var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+		return new bootstrap.Popover(popoverTriggerEl);
+	});
+	var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+		trigger: 'hover'
+	});
+</script>
+
+{% endblock %}

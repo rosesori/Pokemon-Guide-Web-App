@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% set active_page = "typeTutor" %}
+
+{% block head %}
+<title>Type Tutorial</title>
+{% endblock %}
+
+{% block body %}
+
+<br>
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col-md-6">
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <!-- INPUT -->
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-3 rightJustify">
+                        <!-- Microphone button for API Speech-to-text -->
+                        <span id="instructions"></span>
+                        <button id="start" class="btn btn-secondary" data-bs-placement="bottom" title="Speech to Text"
+                            data-bs-trigger="hover focus" data-toggle="popover"
+                            data-bs-content="To use: click the microphone button, say a type of Pokemon into your microphone, and then click the micrphone button again to stop recording.">
+                            <img style="width: 28px; height: 28px; margin-top: 0px; padding-top: 0px;"
+                                src="{{url_for('static', filename='img/mic.png')}}" class="imgType" />
+                        </button>
+                    </div>
+                    <div class="col-md-9 ">
+                        <form class="form-group" action="{{url_for('typeTutor')}}" method="POST">
+                            <div class="input-group input-group-lg mb-3">
+                                <input type="search" class="form-control" id="textarea" name="content" data-bs-placement="bottom"
+                                    placeholder="Your Pokemon" aria-label="Search through site content"
+                                    title="Enter a pokemon name."
+                                    data-bs-trigger="hover focus" data-toggle="popover"
+                                    data-bs-content="Type the name of one of your Pokemon and this will return what Types your Pokemon is strong against.">
+
+                                <button class="btn btn-primary form-control-lg" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 
+            <button id="start" class="btn btn-secondary mb-2" style="position: relative; left: 33%; top: 50px;">
+                <img style="width: 30px; height: 30px; margin-top: 0px; padding-top: 0px;"
+                    src="{{url_for('static', filename='img/mic.png')}}" class="imgType" />
+            </button>
+
+            <form action="{{url_for('typeTutor')}}" method="POST">
+
+                <div id="opponent" class="">
+                    <label for="site-search" id="label">Your pokemon</label>
+                    <input type="search" id="textarea" name="content" aria-label="Search through site content"
+                        class="input">
+                </div>
+                <div id="opponent" class="left">
+
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block sub" id="submitBtn">
+                    Type
+                </button>
+            </form> -->
+
+
+            <div>
+                <img src="{{ url_for('static', filename='img/pokedex.png')}}" style="width: 100%;" alt="pokedex" 
+                    aria-readonly="true">
+
+                <img src={{sprite}} style="width: 12%;" alt="" class="pokedex" aria-readonly="true" id="pokeImg">
+
+                <p id="enemyPokemon" class="move">
+                    {% for type in types %}
+                    {{type}}
+
+                    {% endfor %}
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <img src="{{url_for('static', filename='img/chartTitle.png')}}" alt="chart of pokemon type title"
+                id=titleChart>
+            <br>
+            <img src="{{ url_for('static', filename='img/realTypeChart.jpg')}}" style="width: 100%;" alt="chart of pokemon type" id=chart>
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="container-textWithBG">
+        <h1 class="col-md-12">About Type Tutorial</h1>
+        <h4 class="col-md-12">Each Pokemon has a different type. Each type has its own strengths and weaknesses. Some types
+            are also stronger than other types. Its important to be familiar with which types your Pokemon's type is strong against
+            to better defeat your opponents. Use the type chart below to get a general overview of type advantages.
+            </h4>
+        <!-- todo: We could insert a link here and say "Visit https://www.wikihow.com/Create-a-Balanced-Pok%C3%A9mon-Team to read more about creating a balanced Pokemon team."-->
+    </div>
+
+    
+
+</div>
+
+
+
+<br>
+
+<!-- Enable popper.js necessities -->
+<script>
+	var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="popover"]'));
+	var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+		return new bootstrap.Popover(popoverTriggerEl);
+	});
+	var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+		trigger: 'focus'
+	});
+</script>
+
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+{% endblock %}

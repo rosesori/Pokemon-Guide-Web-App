@@ -1,0 +1,25 @@
+.rightJustify{
+    text-align: right;
+    padding-right: 3px;
+}
+
+.leftJustify{
+    text-align: left;
+    padding-right: 3px;
+}
+
+.checkBoxes{
+    background-color: rgb(130, 197, 255);
+    border-radius: 20px;
+}
+
+.input2{
+    width: 8vw;
+    border: 1px solid blue;
+    height: 5vh;
+}
+
+/* .alignVert {
+    display: flex;
+    align-items: center
+} */

@@ -1,0 +1,185 @@
+{% extends 'base.html' %}
+{% set active_page = "team" %}
+
+{% block head %}
+<title>Team Composition</title>
+{% endblock %}
+
+{% block body %}
+<br>
+
+<br>
+
+<form class="form-group" method="POST">
+    <div class="container text-center">
+        <div class="alignVert row">
+            <!-- LEFT SIDE with INPUT -->
+            <div class="col-md-6">
+                <!-- User intry table -->
+                <label class="label-input" style="width: 100%" for="site-search">Team Members</label>
+                <table class="table-primary table table-bordered " style="background-color: #ffffff !important">
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>
+                                <input type="search" id="textarea" name="poke1" aria-label="Input pokemon on team" class="input" placeholder="Pokemon Name" data-bs-placement="bottom" 
+                                data-bs-trigger="hover" data-toggle="popover" 
+                                title="Pokemon Name" 
+                                data-bs-content="Type in the name of a pokemon on your battle team.">
+                                <!-- Microphone Button -->
+                                <span id="instructions"></span>
+                                <button type="button" id="start" class="btn btn-secondary" data-bs-placement="bottom" title="Speech to Text" data-bs-trigger="hover" data-toggle="popover" 
+                                    data-bs-content="To use: click the microphone button, say the name of one Pokemon into your microphone, and then click the microphone button again to stop recording.">
+                                    <img style="width: 28px; height: 28px; margin-top: 0px; padding-top: 0px;" src="{{url_for('static', filename='img/mic.png')}}" class="imgType" />
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>
+                                <input type="search" id="textarea" name="poke2" aria-label="Input pokemon on team" class="input" placeholder="Pokemon Name" data-bs-placement="bottom" 
+                                data-bs-trigger="hover" data-toggle="popover" 
+                                title="Pokemon Name" 
+                                data-bs-content="Type in the name of a pokemon on your battle team.">
+                                <!-- Microphone Button -->
+                                <span id="instructions"></span>
+                                <button type="button" id="start" class="btn btn-secondary" data-bs-placement="bottom" title="Speech to Text" data-bs-trigger="hover" data-toggle="popover" 
+                                    data-bs-content="To use: click the microphone button, say the name of one Pokemon into your microphone, and then click the microphone button again to stop recording.">
+                                    <img style="width: 28px; height: 28px; margin-top: 0px; padding-top: 0px;" src="{{url_for('static', filename='img/mic.png')}}" class="imgType" />
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>
+                            <input type="search" id="poke3" name="poke3" aria-label="Input pokemon on team" class="input" placeholder="Pokemon Name" data-bs-placement="bottom" 
+                            data-bs-trigger="hover" data-toggle="popover" 
+                            title="Pokemon Name" 
+                            data-bs-content="Type in the name of a pokemon on your battle team.">
+                            <!-- Microphone Button -->
+                            <span id="instructions"></span>
+                            <button type="button" id="start" class="btn btn-secondary" data-bs-placement="bottom" title="Speech to Text" data-bs-trigger="hover" data-toggle="popover" 
+                                data-bs-content="To use: click the microphone button, say the name of one Pokemon into your microphone, and then click the microphone button again to stop recording.">
+                                <img style="width: 28px; height: 28px; margin-top: 0px; padding-top: 0px;" src="{{url_for('static', filename='img/mic.png')}}" class="imgType" />
+                            </button>
+                        </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>
+                                <input type="search" id="poke4" name="poke4" aria-label="Input pokemon on team" class="input" placeholder="Pokemon Name" data-bs-placement="bottom" 
+                                data-bs-trigger="hover" data-toggle="popover" 
+                                title="Pokemon Name" 
+                                data-bs-content="Type in the name of a pokemon on your battle team.">
+                                <!-- Microphone Button -->
+                                <span id="instructions"></span>
+                                <button type="button" id="start" class="btn btn-secondary" data-bs-placement="bottom" title="Speech to Text" data-bs-trigger="hover" data-toggle="popover" 
+                                    data-bs-content="To use: click the microphone button, say the name of one Pokemon into your microphone, and then click the microphone button again to stop recording.">
+                                    <img style="width: 28px; height: 28px; margin-top: 0px; padding-top: 0px;" src="{{url_for('static', filename='img/mic.png')}}" class="imgType" />
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>
+                                <input type="search" id="poke5" name="poke5" aria-label="Input pokemon on team" class="input" placeholder="Pokemon Name" data-bs-placement="bottom" 
+                                data-bs-trigger="hover" data-toggle="popover" 
+                                title="Pokemon Name" 
+                                data-bs-content="Type in the name of a pokemon on your battle team.">
+                                <!-- Microphone Button -->
+                                <span id="instructions"></span>
+                                <button type="button" id="start" class="btn btn-secondary" data-bs-placement="bottom" title="Speech to Text" data-bs-trigger="hover" data-toggle="popover" 
+                                    data-bs-content="To use: click the microphone button, say the name of one Pokemon into your microphone, and then click the microphone button again to stop recording.">
+                                    <img style="width: 28px; height: 28px; margin-top: 0px; padding-top: 0px;" src="{{url_for('static', filename='img/mic.png')}}" class="imgType" />
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>
+                                <input type="search" id="poke6" name="poke6" aria-label="Input pokemon on team" class="input" placeholder="Pokemon Name" data-bs-placement="bottom" 
+                                data-bs-trigger="hover" data-toggle="popover" 
+                                title="Pokemon Name" 
+                                data-bs-content="Type in the name of a pokemon on your battle team.">
+                                <!-- Microphone Button -->
+                                <span id="instructions"></span>
+                                <button type="button" id="start" class="btn btn-secondary" data-bs-placement="bottom" title="Speech to Text" data-bs-trigger="hover" data-toggle="popover" 
+                                    data-bs-content="To use: click the microphone button, say the name of one Pokemon into your microphone, and then click the microphone button again to stop recording.">
+                                    <img style="width: 28px; height: 28px; margin-top: 0px; padding-top: 0px;" src="{{url_for('static', filename='img/mic.png')}}" class="imgType" />
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <!-- Submit button -->
+                <div class="container text-center" style="margin: auto; width: 50%;">
+                    <button class="btn btn-primary mb-2" style="width: 100%;" type="submit">Submit</button>
+                </div>
+            </div>
+            
+            <!-- RIGHT SIDE with our FEEDBACK -->
+            <div class="col-md-6">
+                <div class="feedback">
+                    <h1 style="width: 100%; background-color: #cfe2ff;">Poke-Guide Team Feedback
+                        {% for pokemon in pokemonList %}
+                        {{pokemon}}
+                        {% endfor %}
+                    </h1>
+                    <br> 
+                        {% if (not haveSubmitted) %}
+                            <h4>Please enter your Pokemon team on the left.</h4>
+                        {% elif hasFlying and hasWater %}
+                            <h4>You have a Flying type and Water type</h4>
+                            <h4>Nice! Your team looks good</h4>
+                        {% elif hasFlying%}
+                            <h4>Nice! You have a Flying type</h4>
+                            <h4>Your team could be improved with a Water type Pokemon</h4>
+                        {% elif hasWater %}
+                            <h4>Nice! You have a Water type</h4>
+                            <h4>Your team could be improved with a Flying type Pokemon</h4>
+                        {% else %}
+                            <h4>Your team could be improved with a Water type and Flying type Pokemon</h4>
+                        {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<br>
+
+<!-- DESCRIPTION PARAGRAPH -->
+<div class="container text-center">
+    <div class="col-md-12">
+        <div class="container-textWithBG">
+
+            <h1 class="col-md-12">About Team Composition</h1>
+            <h4 class="col-md-12">A good competitive team consists of Pokemon that boast great synergy with each other.
+                Each Pokemon in your team performs different roles and functions -
+                they may cover each other's weaknesses or assist others offensively or defensively. A Pokémon's stats,
+                abilities and learnset generally make them better suited for certain roles,
+                Thus deciding one team roles before you start choosing Pokémon will help to narrow down options.
+                Examples include healers, tanks (high defense), and cripplers (inflict status conditions).
+                Consider the types of pokemon on your team, so that generally no more than two Pokemon on your team have
+                the same type. Use a mix of rare and common types of pokemon.</h4>
+        </div>
+        <br>
+
+    </div>
+</div>
+
+<!-- Enable popper.js necessities -->
+<script>
+	var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="popover"]'));
+	var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+		return new bootstrap.Popover(popoverTriggerEl);
+	});
+	var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+		trigger: 'hover'
+	});
+</script>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+{% endblock %}

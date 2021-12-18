@@ -1,0 +1,31 @@
+.compatibleMachines{
+    background-color: white;
+    top: 38vh;
+    height: 40vh;
+    font-weight: bold;
+    left: 26vw;
+    width: 23vw;
+    font-size: large;
+}
+
+.left{
+    float: left;
+    position: relative;
+    left: 12vw;
+}
+
+#typeList{
+    background-color: #e4000f;
+    font-weight: bold;
+}
+
+.error{
+    background-color: #e7e1e1ec;
+    color: red;
+    border: 1px solid red;
+}
+
+.rightJustify{
+    text-align: right;
+    padding-right: 3px;
+}

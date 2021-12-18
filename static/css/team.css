@@ -1,0 +1,34 @@
+.rightJustify{
+    text-align: right;
+    padding-right: 3px;
+}
+
+.leftJustify{
+    text-align: left;
+    padding-right: 3px;
+}
+
+.checkBoxes{
+    padding: 16px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 0px;
+}
+
+.input2{
+    width: 8vw;
+    /* border: 1px solid blue; */
+    height: 5vh;
+}
+
+.feedback{
+    /* border-radius: 1.5rem; */
+    background-color: #cfe2ff;
+    font-weight: bold;
+    border-radius: .25rem;
+}
+
+.micBtn{
+    position: relative;
+    left:  50%;
+}

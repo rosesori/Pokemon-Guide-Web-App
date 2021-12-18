@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% set active_page = "item" %}
+
+{% block head %}
+<title>HMs & TMs</title>
+{% endblock %}
+
+{% block body %}
+
+<br>
+<br>
+
+<!-- INPUT -->
+<div class="container text-center">
+	<div class="row">
+		<div class="col-md-2 ">
+			<!-- Microphone button for API Speech-to-text -->
+			<span id="instructions"></span>
+			<button id="start" class="btn btn-secondary" data-bs-placement="bottom" title="Speech to Text"
+				data-bs-trigger="hover focus" data-toggle="popover"
+				data-bs-content="To use: click the microphone button, say a type of Pokemon into your microphone, and then click the micrphone button again to stop recording.">
+				<img style="width: 28px; height: 28px; margin-top: 0px; padding-top: 0px;"
+					src="{{url_for('static', filename='img/mic.png')}}" class="imgType" />
+			</button>
+		</div>
+		<div class="col-md-10">
+			<form class="form-group" action="{{url_for('item')}}" method="POST">
+				<div class="input-group input-group-lg mb-3">
+					<input type="search" class="form-control" id="textarea" name="content" data-bs-placement="bottom"
+						placeholder="Pokemon Type" aria-label="Search through site content"
+						title="[ Fire - Grass - Water - Dragon - Flying - Normal - Ground - Rock - Fighting - Electric - Ice - Psychic ]"
+						data-bs-trigger="hover focus" data-toggle="popover"
+						data-bs-content="Enter one of these types of Pokemon to see what HMs/TMs are of matching type.">
+
+					<button class="btn btn-primary form-control-lg" type="submit">Submit</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<br>
+
+<!-- OUTPUT of this page's function-->
+<div class="container text-center">
+	<table class="table table-bordered table-primary">
+		<tbody>
+			{% if items|length > 0 %}
+			<thead>
+				<tr>
+					<th scope="col">Move ID</th>
+					<th scope="col">type</th>
+					<th scope="col">Move</th>
+					<th scope="col">Machine</th>
+				</tr>
+			</thead>
+			{% for item in items %}
+
+			{% if item[3] != "" and correct %}
+			<tr>
+				<th scope="row">{{item[0]}}</th>
+				<td>{{item[1]}}</td>
+				<td>{{item[2]}}</td>
+				<td>{{item[3]}}</td>
+				</th>
+			</tr>
+			{% endif %}
+			{% endfor %}
+
+			{% elif not correct%}
+			<h5 class="error">
+				Please enter a type from the list of types with HM & TM from above
+			</h5>
+			{% endif %}
+		<tbody>
+	</table>
+</div>
+
+<!-- Page description area -->
+<div class="container text-center">
+	<div class="col-md-12">
+
+		<!-- <div class="container-textWithBG">
+			<p id="typeList">Types with HMs&TMs: Fire, Grass, Water, Dragon, Flying, Normal, Ground, Rock, Fighting, Electric, Ice, Psychic</p>
+		</div> -->
+
+		<br>
+
+		<div class="container-textWithBG" >
+			<h1 class="col-md-12" >What are HMs?</h1>
+			<h4 class="col-md-12">Hidden Machines, or HMs, are items found throughout the Pokemon world which allow you
+				to
+				teach certain Moves to certain Pokemon. Unlike TMs, HMs cannot
+				be forgotten unless you go to the Move Deleter, a man that can delete any move in your Pokemon's move
+				set. Read below about TMs to understand the differences between TMs and HMs.
+			</h4>
+		</div>
+
+		<br>
+
+		<div class="container-textWithBG">
+			<h1 class="col-md-12">What are TMs?</h1>
+			<h4 class="col-md-12">Technical Machines, or TMs, are items found throughout the Pokemon world which allow
+				you to
+				teach certain Moves to certain Pokemon.
+				TMs are mainly used for battle, and can be easily forgotten to make room for another move.
+			</h4>
+		</div>
+
+	</div>
+</div>
+<br>
+
+<!-- Images of HMs and TMs -->
+<div class="container text-center">
+	<div class="row">
+		<div class="col">
+			<img src="{{url_for('static', filename='img/hmtm2.png')}}" class="img-fluid" />
+		</div>
+		<div class="col">
+			<img src="{{url_for('static', filename='img/hmtm1.png')}}" class="img-fluid" />
+		</div>
+		<div class="col">
+			<img src="{{url_for('static', filename='img/hmtm3.gif')}}" class="img-fluid" />
+		</div>
+	</div>
+	<br>
+</div>
+
+<!-- Enable popper.js necessities -->
+<script>
+	var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="popover"]'));
+	var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+		return new bootstrap.Popover(popoverTriggerEl);
+	});
+	var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
+		trigger: 'focus'
+	});
+</script>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+{% endblock %}

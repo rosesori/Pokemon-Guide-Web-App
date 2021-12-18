@@ -1,0 +1,156 @@
+#frame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 10vh;  
+    
+}
+.userSelect {
+    display: flex;
+    position: absolute;
+    top: 55%;
+}
+
+.userSelect div {
+    padding-left: 10vw;
+    padding-right: 8vw;
+}
+
+.imgType {
+    width: 15vw;
+}
+
+img {
+    position: relative;
+    top: 1vh;
+    display: block;
+    margin-bottom:1vh ;
+    /* margin-top: 1vh; */
+}
+
+/* .img-homePG{
+    position: ;
+} */
+
+/* Text Edits */
+h3{
+    position: relative;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+    border: none;
+    border-radius: 0px;
+    width: 15vw;
+}
+
+h4{
+    position: relative;
+    font-size: 20px;
+    /* font-weight: bold; */
+    text-align: center;
+    color: #000000;
+    border: none;
+    border-radius: 0px;
+    /* width: 15vw; */
+} 
+
+.container-textWithBG{
+   
+    border-radius: 1.5rem;
+    background-color: #ffffff;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* End of Text Edits */
+.button {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 1rem;
+    padding-top: 0px;
+    color: #ffffff;
+    background-color: #e4000f;
+    border: none;
+    border-top: 0px;
+    border-radius: 0.25rem;
+    width: 15vw;
+}
+  
+.button:hover {
+    background-color: #ffffff;
+    color: #e4000f;
+    transform: translateY(4px);
+}
+  
+.button:active {
+    background-color: #e4000f;
+    transform: translateY(3px);
+}
+
+/* Bootstrap Button Adjustments */
+.btn-primary{
+    background-color: #e4000f;
+    color: #ffffff;
+    border-color: #e4000f;
+}
+
+.btn-primary:hover{
+    background-color: #ffffff;
+    color: #e4000f;
+    border-color: #ffffff;
+}
+
+.btn-secondary{
+    background-color: #ffffff;
+    color: #e4000f;
+    border-color: #ffffff;
+}
+
+.btn-secondary:hover{
+    background-color: #e4000f;
+    color: #ffffff;
+    border-color: #e4000f;
+}
+
+/* End of Bootstrap Button Adjustments */
+
+/* Bootstrap Table Adjustments */
+.label-input{
+    background-color: #ffffff;
+    width: 18vw;
+    height: 5vh;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    border: 2px solid #9e9e9e;
+}
+
+.label-output{
+    background-color: #cfe2ff;
+    width: 18vw;
+    height: 5vh;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    border: 2px solid #9e9e9e;
+}
+
+.table-primary{
+    --bs-table-bg: #ffffff;
+    border-color: #9e9e9e;
+}
+
+.input{
+    width: 13vw;
+    /* border: 1px solid blue; */
+    height: 5vh;
+}
+/* End */
+

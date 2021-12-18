@@ -1,0 +1,109 @@
+/* img {
+    position: relative;
+    top: 1vh;
+    display: block;
+    margin-bottom:1vh ;
+    margin-top: 1vh;
+} */
+
+/* .typeChart{
+    width: 40vw;
+} */
+
+#titleChart{
+    width: 30%;
+    /* height: 10vh; */
+    border-radius:2%;
+    box-shadow: 3px 3px 3px 3px rgb(43, 32, 32);
+    margin: auto;
+}
+
+/* #chart{
+    width: 36vw;
+    margin: auto;
+    box-shadow: 3px 3px 3px 3px rgb(43, 32, 32);
+    border-radius: 1%;
+} */
+
+/* .userInput{
+    position: absolute;
+    bottom: 60vh;
+    left: 55vw;
+    text-align: center;
+} */
+
+/* #submitBtn{
+    margin-top: 1vh;
+    width: 5vw;
+} */
+
+.pokedex{
+    position: absolute;
+    top: 52vh;
+    left: 9vw;
+    /* top: px; */
+    /* left: 13%; */
+}
+
+/* #pokeImg{
+    position: absolute;
+    top: 27vh;
+} */
+
+.move{
+    background-color: #cfe2ff;
+    position: absolute;
+    top: 59vh;
+    height: 6vh;
+    font-weight: bold;
+    left: 31vw;
+    /* width: 100&; */
+    width: 13vw;
+}
+
+/* .poke{
+    position: relative;
+    background-color: aliceblue;
+} */
+
+/* #typeExplained{
+    position: relative;
+    background-color: rgb(58, 209, 255);
+    border:2px solid black;
+    bottom: 82vh;
+    width: 30vw;
+    float: right;
+    margin-bottom:10;
+} */
+
+#label{
+    background-color: rgb(130, 197, 255);
+    width: 11vw;
+    height: 5vh;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    border: 2px solid blue;
+}
+
+/* #opponent{
+    position: relative;
+    left: 2%;
+    margin-left: 2%;
+} */
+
+/* .sub{
+    position: relative;
+    right: 10%;
+} */
+
+/* .speech{
+    position: relative;
+    right: 40%;
+} */
+
+.rightJustify{
+    text-align: right;
+    padding-right: 3px;
+}
+
