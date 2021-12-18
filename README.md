@@ -1,0 +1,2 @@
+# Pokemon-Guide
+Pokemon is one of the most popular franchises loved by children and adults alike. However, there are some aspects of the game which are confusing to new players. It can take time to research each of the different aspects and become familiar with the mechanics of Pokemon. Our solution, Poke-Guide, is a site which aims to teach new Pokemon players three basic aspects of Pokemon which are not explicitly explained in the game. 
